@@ -1,18 +1,19 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.zzzxb.comment</id>
-    <name>Comment</name>
+    <id>com.github.zzzxb.annotation</id>
+    <name>Annotation</name>
     <vendor>zzzxb</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.zzzxb.comment.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.zzzxb.comment.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    <actions>
+        <action id="GenerateCommentAction"
+                class="com.github.zzzxb.annotation.action.AnnotationAction"
+                text="Annotating Code"
+                description="Add annotation or remove annotation">
+            <keyboard-shortcut first-keystroke="ctrl MINUS" keymap="$default"/>
+            <keyboard-shortcut first-keystroke="control MINUS" keymap="Mac OS X"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>

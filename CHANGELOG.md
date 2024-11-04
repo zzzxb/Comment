@@ -1,7 +1,5 @@
-<!-- Keep a Changelog guide -> https://keepachangelog.com -->
-
-# Comment Changelog
+# 注释修改
 
 ## [Unreleased]
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- 添加或移除 -- 注释
